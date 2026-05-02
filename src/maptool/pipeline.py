@@ -14,6 +14,7 @@ from maptool.render.biome_compositor import DEFAULT_TILE_PX, render_with_biomes
 from maptool.render.climate_paint import render_preview
 from maptool.render.forest import render_forest
 from maptool.render.tree_sprites import render_tree_layer
+from maptool.render.vectors import render_overlays
 from maptool.sources import srtm, worldcover
 from maptool.sources.srtm import DEFAULT_DEM_TYPE
 
@@ -142,8 +143,9 @@ def render(
     with_forest: bool = True,
     paint_mode: str = DEFAULT_PAINT_MODE,
     tile_px: int = DEFAULT_TILE_PX,
+    with_osm: bool = False,
 ) -> None:
-    log.info("Render: %s  paint=%s  tile_px=%d", name, paint_mode, tile_px)
+    log.info("Render: %s  paint=%s  tile_px=%d  osm=%s", name, paint_mode, tile_px, with_osm)
     if not layout.height_png.exists() or not layout.height_meta.exists():
         raise FileNotFoundError(
             f"Missing {layout.height_png.name} or {layout.height_meta.name}; "
@@ -180,14 +182,18 @@ def render(
     elif with_forest:
         log.info("  forest skipped: %s missing", layout.lc_codes.name)
 
-    rivers_path = layout.rivers_geojson if layout.rivers_geojson.exists() else None
-    if rivers_path is not None:
-        annotate(base_for_overlay, layout.annotated, bbox, rivers_geojson=rivers_path)
-        _write_thumb(layout.annotated, layout.previews / f"{name}_annotated_thumb.png")
+    if with_osm:
+        log.info("OSM overlays: %s", name)
+        try:
+            render_overlays(
+                base_for_overlay, layout.annotated, bbox, layout.cache_dir,
+                rivers=True, roads=True, settlements=True,
+            )
+            _write_thumb(layout.annotated, layout.previews / f"{name}_annotated_thumb.png")
+        except Exception as e:  # noqa: BLE001
+            log.warning("OSM overlays failed: %s", e)
     else:
-        # No rivers to overlay -> annotated would just duplicate forest/color.
-        # Skip the extra ~125 MB write at ultra resolution.
-        log.info("  annotate skipped (no rivers geojson)")
+        log.info("  OSM overlays skipped (--no-osm)")
     _write_thumb(layout.color, layout.previews / f"{name}_thumb.png")
 
 
@@ -202,6 +208,7 @@ def build_all(
     with_forest: bool = True,
     paint_mode: str = DEFAULT_PAINT_MODE,
     tile_px: int = DEFAULT_TILE_PX,
+    with_osm: bool = False,
 ) -> None:
     """Full pipeline for one region."""
     log.info("=== %s ===", name)
@@ -210,5 +217,6 @@ def build_all(
     build_heightmap(name, bbox, layout, api_key, max_dim, force)
     if not skip_landcover:
         build_landcover(name, bbox, layout, max_dim)
-    render(name, bbox, layout, with_forest=with_forest, paint_mode=paint_mode, tile_px=tile_px)
+    render(name, bbox, layout, with_forest=with_forest, paint_mode=paint_mode,
+           tile_px=tile_px, with_osm=with_osm)
     log.info("Done: %s", name)

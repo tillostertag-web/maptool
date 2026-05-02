@@ -114,6 +114,7 @@ def cmd_build(args: argparse.Namespace) -> int:
             with_forest=not args.no_forest,
             paint_mode=args.paint,
             tile_px=args.tile_px,
+            with_osm=args.osm,
         )
     write_gallery(Path(args.out_dir).resolve())
     return 0
@@ -135,6 +136,7 @@ def cmd_render(args: argparse.Namespace) -> int:
             with_forest=not args.no_forest,
             paint_mode=args.paint,
             tile_px=args.tile_px,
+            with_osm=args.osm,
         )
     write_gallery(Path(args.out_dir).resolve())
     return 0
@@ -346,6 +348,8 @@ def _add_target_args(p: argparse.ArgumentParser) -> None:
                         f"'climate' uses the procedural climate paint (default {DEFAULT_PAINT_MODE})")
     p.add_argument("--tile-px", type=int, default=DEFAULT_TILE_PX,
                    help=f"biome texture tile size in canvas pixels (default {DEFAULT_TILE_PX})")
+    p.add_argument("--osm", action="store_true",
+                   help="add OSM overlays (rivers / roads / settlements; needs network)")
 
 
 def main(argv: list[str] | None = None) -> int:
