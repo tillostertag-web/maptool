@@ -1,0 +1,9 @@
+{
+  "slug": "snow",
+  "prompt": "Aerial drone photograph from 10 meters directly above fresh fallen snow, pristine white snow surface filling every pixel edge to edge, subtle wind drift patterns and small ripple texture across the whole frame, faint shadow modulation in folds, top-down view, snow-only frame",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

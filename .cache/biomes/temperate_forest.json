@@ -1,0 +1,9 @@
+{
+  "slug": "temperate_forest",
+  "prompt": "Aerial drone photograph from 30 meters directly above a dense Mediterranean oak and pine forest, rounded tree crowns packed tightly across every pixel of the frame edge to edge, dark olive green canopy, top-down orthographic view, repeating canopy pattern, painted satellite map quality",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

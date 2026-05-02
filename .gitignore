@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.eggs/
+build/
+dist/
+
+# Env (contains API keys — never commit)
+.env
+
+# Test / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated map outputs (large, regeneratable)
+out/
+!out/.gitkeep
+
+# Cache: skip everything by default, then allow small useful artefacts so a
+# fresh clone has the same default biome textures, tree sprites and params.
+.cache/*
+!.cache/.gitkeep
+!.cache/biome_params.json
+!.cache/biomes/
+!.cache/sprites/
+.cache/biomes/*.json   # per-biome metadata can be regenerated
+
+# Skip large heightmap tifs (~50-150 MB each — fetched on demand from OpenTopo)
+.cache/*.tif
+.cache/studio_sample/
+.cache/studio_tiled/
+.cache/studio_history/
+.cache/osm/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc temp
+/tmp/

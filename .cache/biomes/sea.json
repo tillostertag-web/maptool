@@ -1,0 +1,9 @@
+{
+  "slug": "sea",
+  "prompt": "Aerial drone photograph from 30 meters directly above the open ocean, deep slate-blue sea water surface filling every pixel edge to edge, gentle ripple pattern and faint wave reflections evenly across the whole frame, calm Mediterranean water, top-down orthographic view, water-only frame",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

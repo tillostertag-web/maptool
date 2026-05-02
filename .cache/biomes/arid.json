@@ -1,0 +1,9 @@
+{
+  "slug": "arid",
+  "prompt": "Aerial drone photograph from 30 meters directly above semi-arid scrubland, dense low grey-green dry shrubs every 2 meters covering the whole frame edge to edge, ocher sandy soil between shrubs, North African desert vegetation, top-down orthographic view",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

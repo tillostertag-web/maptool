@@ -1,0 +1,9 @@
+{
+  "slug": "coast",
+  "prompt": "Aerial drone photograph from 5 meters directly above a Mediterranean beach, fine ocher sand grain texture filling every pixel edge to edge, scattered tiny pebbles and shells visible across the whole frame, wet drag marks left by waves, dry coastal sand, top-down view",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "temperate_grass",
+  "prompt": "Aerial drone photograph from 30 meters directly above Mediterranean farmland, patchwork of small green and ocher field strips covering every pixel edge to edge, low dry-stone walls between fields, summer wheat and grass, top-down view",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

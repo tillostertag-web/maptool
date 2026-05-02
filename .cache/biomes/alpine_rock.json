@@ -1,0 +1,9 @@
+{
+  "slug": "alpine_rock",
+  "prompt": "Aerial drone photograph from 30 meters directly above a mountain scree slope, broken angular grey-brown stones of varied sizes packed tightly every meter covering the whole frame edge to edge, exposed alpine rock, top-down view",
+  "seed": 20260501,
+  "model": null,
+  "request": {
+    "image_size": "square_hd"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "params": {
+    "sea": {
+      "slug": "sea",
+      "base_color": [
+        38,
+        70,
+        105
+      ],
+      "accent_color": [
+        60,
+        92,
+        130
+      ],
+      "noise_scale": 24.0,
+      "grain_scale": 2.0,
+      "grain_weight": 0.2,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "coast": {
+      "slug": "coast",
+      "base_color": [
+        220,
+        200,
+        160
+      ],
+      "accent_color": [
+        245,
+        230,
+        195
+      ],
+      "noise_scale": 14.0,
+      "grain_scale": 1.5,
+      "grain_weight": 0.35,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "arid": {
+      "slug": "arid",
+      "base_color": [
+        180,
+        158,
+        110
+      ],
+      "accent_color": [
+        148,
+        122,
+        88
+      ],
+      "noise_scale": 18.0,
+      "grain_scale": 1.5,
+      "grain_weight": 0.42,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "temperate_grass": {
+      "slug": "temperate_grass",
+      "base_color": [
+        110,
+        128,
+        78
+      ],
+      "accent_color": [
+        148,
+        158,
+        92
+      ],
+      "noise_scale": 22.0,
+      "grain_scale": 1.8,
+      "grain_weight": 0.36,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "temperate_forest": {
+      "slug": "temperate_forest",
+      "base_color": [
+        40,
+        55,
+        26
+      ],
+      "accent_color": [
+        72,
+        88,
+        42
+      ],
+      "noise_scale": 12.0,
+      "grain_scale": 1.4,
+      "grain_weight": 0.42,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "alpine_rock": {
+      "slug": "alpine_rock",
+      "base_color": [
+        110,
+        96,
+        84
+      ],
+      "accent_color": [
+        78,
+        66,
+        58
+      ],
+      "noise_scale": 14.0,
+      "grain_scale": 1.3,
+      "grain_weight": 0.55,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "cliffs": {
+      "slug": "cliffs",
+      "base_color": [
+        105,
+        90,
+        76
+      ],
+      "accent_color": [
+        138,
+        122,
+        102
+      ],
+      "noise_scale": 16.0,
+      "grain_scale": 1.4,
+      "grain_weight": 0.48,
+      "brightness": 1.0,
+      "contrast": 1.0
+    },
+    "snow": {
+      "slug": "snow",
+      "base_color": [
+        245,
+        248,
+        252
+      ],
+      "accent_color": [
+        220,
+        230,
+        240
+      ],
+      "noise_scale": 22.0,
+      "grain_scale": 2.0,
+      "grain_weight": 0.18,
+      "brightness": 1.0,
+      "contrast": 1.0
+    }
+  },
+  "seeds": {
+    "sea": 20260501,
+    "coast": 20260501,
+    "arid": 20260501,
+    "temperate_grass": 20260501,
+    "temperate_forest": 20260501,
+    "alpine_rock": 20260501,
+    "cliffs": 20260501,
+    "snow": 20260501
+  }
+}
